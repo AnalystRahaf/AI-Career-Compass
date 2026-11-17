@@ -91,11 +91,10 @@ from sklearn.metrics import mean_absolute_error
 mae = mean_absolute_error(y_test, predictions)
 
 print(mae)
-# إنشاء مستخدم جديد بكل الأعمدة المطلوبة
 
 new_person = pd.DataFrame(0, index=[0], columns=X.columns)
 
-# البيانات الأساسية
+#Org column
 new_person["work_year"] = 2026
 new_person["job_title"] = "Data Scientist"
 new_person["job_category"] = "Data Science"
@@ -106,13 +105,13 @@ new_person["work_setting"] = "Remote"
 new_person["company_location"] = "US"
 new_person["company_size"] = "L"
 
-# المهارات
+# Skills
 new_person["Python"] = 1
 new_person["SQL"] = 1
 new_person["AWS"] = 1
 new_person["Power BI"] = 1
 
-# التوقع
+# Predict
 salary = model.predict(new_person)
 
 print("Predicted Salary: $", round(salary[0], 2))
