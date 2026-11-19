@@ -12,7 +12,7 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 #print(os.getcwd())
 #print(os.listdir())
-df = pd.read_csv("C:/Users/ssrr0/OneDrive/سطح المكتب/My Project/data_science_job_realistic.csv")
+df = pd.read_csv("data_science_job_realistic.csv")
 print(df.columns)
 df["skills"] = df["skills"].str.split(", ")
 print(df["skills"].head())
